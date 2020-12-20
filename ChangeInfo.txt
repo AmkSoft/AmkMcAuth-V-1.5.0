@@ -1,0 +1,24 @@
+// What is Changed in this version (1.5.0)
+//
+// New-Features:
+// Capcha system using temporary inventory and selecting a Minecraft-Block on joining a server.
+// Passwords can now be used by selecting a Minecraft-Block when Registering, Player Login and Change password,
+// 		instead of typing in a password on then Register, Login and ChangePass commands by showing a temporary inventory. 
+// 		AmkMcAuth uses the placeholder 'menu' where you normaly would type the password itself.
+// 		If AmkMcAuth sees the "password": 'menu' it opens a temporary inventory with random blocks and the 
+//		player has to click the block the he has set/uses as his password-block.
+//
+// Bug-Fix:
+// Optimized(instantly) MySQL update when changing password, thanks to bukkit-member mdfm28 who made the changes to the code.  
+//
+// ToDo:
+// adding "type password twice" option on register, just to be sure, so the player checks his own password.
+// adding security question to reset own password if answer on security question is correct.
+//
+// adding bStats Server build (Spigot Paper eg.)
+//
+// IcedToDo:
+// "clear player inventory on Join when not logged in and restore on Login and/or leave"
+// This can now be done using inventory plugins by setting the OnJoin, OnLogin and OnLeave AmkMcAuth events
+// adding option to prevent player "pushing" when "teleport_to_spawn: true: is used. But Hiding not logged-in Players works! 
+//        hint to use: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/LivingEntity.html#setCollidable-boolean-
